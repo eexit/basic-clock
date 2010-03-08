@@ -2,17 +2,15 @@ import java.util.*;
 
 public class Clock
 {   
-    private int start[] = {0, 0, 0};
-    private int end[] = {60, 60, 24};
-    private int step[] = {1, 1, 1};
+    private int start[] = {0,   0,  0};
+    private int end[]   = {60,  60, 24};
+    private int step[]  = {1,   1,  1};
     private CounterCollector clock;
-    private Formatter formatter;
     private String format = "%h%:%m%:%s%";
     
     public Clock()
     {   
         this.clock = new CounterCollector(3, this.start, this.end, this.step);
-        this.formatter = new Formatter();
     }
     
     public Clock work()
