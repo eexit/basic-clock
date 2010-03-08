@@ -19,23 +19,32 @@ public class CounterCollector
     public CounterCollector(int nb_counters, int[] values)
     {
         this(nb_counters);
-        for (int i = 0; i < nb_counters; i++) {
-            this.counters[i].setValue(values[i]);
+        
+        if (values.length == nb_counters) {
+            for (int i = 0; i < nb_counters; i++) {
+                this.counters[i].setValue(values[i]);
+            }
         }
     }
     
     public CounterCollector(int nb_counters, int[] start, int[] end, int[] step)
     {
         this(nb_counters);
-        for (int i = 0; i < nb_counters; i++) {
-            this.counters[i] = new Counter(start[i], end[i], step[i]);
+        
+        if (start.length == nb_counters
+            && end.length == nb_counters
+            && step.length == nb_counters
+        ) {
+            for (int i = 0; i < nb_counters; i++) {
+                this.counters[i] = new Counter(start[i], end[i], step[i]);
+            }
         }
     }
     
     public Counter getCounter(int index)
     {
-        if (counters[index] instanceof Counter) {
-            return counters[index];
+        if (this.counters[index] instanceof Counter) {
+            return this.counters[index];
         }
         return null;
     }
