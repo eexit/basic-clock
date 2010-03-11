@@ -85,13 +85,15 @@ Basic Clock has been developped to work into the console, there is not GUI versi
 ## Changelog
 
 **2010-03-11 — v.1.01**
-    * ADDED: full Java documentation for classes
-    * CHANGED: Clock extends from CounterCollector
-    * CHANGED: Clock.work() and Clock.workOnce() throws InterruptedException
-    * CHANGED: Clock.getValue(String format) retuns on-demand formatted clock value instead of setting new format using Clock.setFormat()
+
+*   ADDED: full Java documentation for classes
+*   CHANGED: Clock extends from CounterCollector
+*   CHANGED: Clock.work() and Clock.workOnce() throws InterruptedException
+*   CHANGED: Clock.getValue(String format) retuns on-demand formatted clock value instead of setting new format using Clock.setFormat()
 
 **2010-03-07 — v.1.00**
-    * Initial release
+
+*   Initial release
 
 ## Licence
 
